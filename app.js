@@ -38,6 +38,8 @@ app.use((req,res,next)=>{
     error.status = 404
     next (error)
 })
+
+// Default Error Handler middleware
 app.use((error,req,res,next)=>{
     if(error.status == 404){
         return res.render('pages/error/404')
@@ -57,5 +59,3 @@ mongoose.connect(`mongodb+srv://EagleBlog:LmBw7OxFzn7RK5Fq@cluster0.pnxzb.mongod
     }).catch(e => {
         console.log(e)
     })
-
-    //kjhrfwuhfwuerhf
