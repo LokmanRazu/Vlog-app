@@ -6,7 +6,7 @@
 html,body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    min-height: 700px;
+    height: 100%;
     background: rgb(245,245,245);
 }
 footer{
@@ -14,4 +14,23 @@ footer{
     background: #222222;
     color: #fff;
     text-align: center;
+    margin-top: 3px;
+}
+.login-footer{
+    background: #222222;
+    color: #fff;
+    text-align: center;
+    margin-top: 180px;
+}
+.Dashboard-footer{
+    background: #222222;
+    color: #fff;
+    text-align: center;
+    margin-top: 380px;
+}
+.Create-footer{
+    background: #222222;
+    color: #fff;
+    text-align: center;
+    margin-top: 240px;
 }

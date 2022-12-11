@@ -4,20 +4,20 @@
             <div class="col-md-2"></div>
             <div class="col-md-10">
                 <div class=" card card-body mx-5">
-                    <form action="/post/create" method="POST" enctype="multipart/form-data">
+                    <form action="/posts/create" method="POST">
                         <div class="form-group">
                           <label for="title">Enter your post title</label> 
                           <input type="text" name="title" id="title" class="form-control"> 
                         </div>
                         <div class="form-group">
-                            <label for="tiny-mce-post-body">Emter your post Body</label>
-                            <textarea name="body" id="tiny-mce-post-body" class="form-control"></textarea>
+                            <label for="body">Enter your post Body</label>
+                            <textarea name="body" id="body" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="tags">Enter some tag(max 10)</label>
                             <input type="text" name="tags" id="tags" placeholder="tag1,tag2,tag3...." class="form-control">
                         </div>
-                        <div class="input-group mb-3">
+                        <!-- <div class="input-group mb-3">
                             <div class="input-group-pepend">
                                 <span class="input-group-text">upload</span>
                             </div>
@@ -25,15 +25,21 @@
                                 <input type="file" name="post-thumbnail" class="custom-file-input" >
                                 <label for="inputGroupFile" class="custom-file-label">Choose File</label>
                             </div>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="create post">
+                        </div> -->
+                        <button type="submit" class="btn btn-primary" > Create </button>
                     </form>
+                    
                 </div>
             </div>
         </div>
     </div>
 
-    <%- include('../../../partials/footer.ejs') %>
+    <div class="Create-footer">
+        <footer>
+            <p class="lead"> YOU CAN WRITE WHAT EVER YOU WANT! </p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
  
         </body>
 

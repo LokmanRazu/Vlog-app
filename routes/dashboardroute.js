@@ -5,7 +5,8 @@ const {
     createProfileGetController,
     createProfilePostController,
     editProfileGetController,
-    editProfilePostController
+    editProfilePostController,
+    getProfile
 } = require('../controllers/dashboardController');
 
 
@@ -15,5 +16,7 @@ router.post('/create-profile',isAuthenticated,createProfilePostController)
 
 router.get('/edit-profile',isAuthenticated,editProfileGetController)
 router.post('/edit-profile',isAuthenticated,editProfilePostController)
+
+router.get('/profile',getProfile)
 
 module.exports = router;

@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 
 
@@ -49,12 +49,12 @@ app.use((error,req,res,next)=>{
 })
 
 const PORT = process.env.PORT ||8080;
-mongoose.connect(`mongodb+srv://EagleBlog:LmBw7OxFzn7RK5Fq@cluster0.pnxzb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+mongoose.connect(`mongodb+srv://LHR:lokmansDB@cluster0.zrbrpbo.mongodb.net/?retryWrites=true&w=majority`,
     { useNewUrlParser: true })
     .then(() => {
         console.log('Database connected')
         app.listen(PORT, () => {
-            console.log(`Server is running on port ${PORT}`)
+            console.log(`Server is running on port ${PORT}`);
         })
     }).catch(e => {
         console.log(e)

@@ -13,6 +13,11 @@ exports.dashBoardGetController =async (req,res,next)=>{
     }catch(e){
         next(e)
     }
+};
+
+
+exports.getProfile =(req,res,next)=>{
+    res.render('pages/dashboard/post/profile',{title:"Profile"});
 }
 
 
@@ -23,7 +28,7 @@ exports.createProfileGetController = async(req,res,next)=>{
             if(profile){             
                return res.redirect('/dashboard/edit-profile')
             }
-            res.render('pages/dashboard/create-profile',{title:'CREAT YOUR PROFILE'})
+            res.render('pages/dashboard/create-profile',{title:'CREATE YOUR PROFILE'})
         }catch(e){
             next(e)
         }

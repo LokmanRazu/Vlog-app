@@ -22,7 +22,7 @@ try{
 })
     await user.save()
     console.log('user created successfully')
-    res.redirect('auth/login',{title:'Creat a New Account '})
+    res.render('pages/auth/login',{title:'Creat a New Account '})
 }catch(e){
    console.log(e)
    next()
@@ -67,10 +67,12 @@ exports.loginPostController =async (req, res, next)=>{
 
     }
     catch(e){
-        console.log(e)
+        console.log(e);
         next()
     }
-}
+};
+
+
 
 
 

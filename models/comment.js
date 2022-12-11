@@ -1,7 +1,7 @@
 //Post ,user , Reply , Body
 
 const {Schema,model} = require('mongoose')
-// const User = require('./user')
+const User = require('./user')
 // const User = require('./Profile')
 // const User = require('./Post')
 

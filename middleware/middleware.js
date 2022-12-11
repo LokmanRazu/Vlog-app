@@ -7,9 +7,9 @@ const setLocals = require('./setLocals')
 
 // CONNCET SESSION TO MONGODB
 var store = new MongoDBStore({
-    uri: 'mongodb+srv://EagleBlog:LmBw7OxFzn7RK5Fq@cluster0.pnxzb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+    uri: 'mongodb+srv://LHR:lokmansDB@cluster0.zrbrpbo.mongodb.net/?retryWrites=true&w=majority',
     collection: 'sessions',
-    expires:1000*60*60*2
+    expires:1000*60*60*10
   });
 
 const Middleware = [
@@ -30,6 +30,6 @@ const Middleware = [
 
 module.exports = app =>{
     Middleware.forEach(m =>{
-        app.use(m)
+        app.use(m);
     })
 }

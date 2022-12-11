@@ -3,10 +3,12 @@ const {isAuthenticated} = require('../middleware/authMiddleWare')
 const upload = require('../middleware/uploadMiddleware')
 const{
     createpostGetController,
-    createpostPostController
+    createpostPostController,
+    postGetController
 } = require('../controllers/postController')
 
-router.get('/create',createpostGetController)
-router.post('/create',isAuthenticated, createpostPostController)
+router.get('/create',isAuthenticated,createpostGetController)
+router.post('/create', isAuthenticated,createpostPostController)
+router.get('/thePost',isAuthenticated,postGetController)
 
 module.exports = router
